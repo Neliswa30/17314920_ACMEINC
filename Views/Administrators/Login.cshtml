@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<h1>Admin</h1>
+
+<h4>Login</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div class="form-group">
+                <label class="control-label">Username</label>
+                <input name="inUsername" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input name="inPassword" id="password" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <br>
+                <span class="text-danger">@ViewBag.userNotFound</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="create">Create new account</a>
+</div>
+

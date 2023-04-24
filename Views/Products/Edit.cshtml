@@ -1,0 +1,44 @@
+﻿@model PROG7311_Task2.Models.AcmeIncTask2db.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Proid" />
+            <div class="form-group">
+                <label asp-for="ProName" class="control-label"></label>
+                <input asp-for="ProName" class="form-control" />
+                <span asp-validation-for="ProName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProPrice" class="control-label"></label>
+                <input asp-for="ProPrice" class="form-control" />
+                <span asp-validation-for="ProPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProDescription" class="control-label"></label>
+                <input asp-for="ProDescription" class="form-control" />
+                <span asp-validation-for="ProDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

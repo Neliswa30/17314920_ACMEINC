@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PROG7311_Task2.Models.AcmeIncTask2db.Cart>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Your cart</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product id
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proid)
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">Cancel</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

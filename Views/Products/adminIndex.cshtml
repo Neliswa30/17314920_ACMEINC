@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PROG7311_Task2.Models.AcmeIncTask2db.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Products management</h1>
+
+<p><a asp-action="Create">Create a new product</a> </p>
+<p><a asp-action="adminindex" asp-controller="shoppingcarts">View orders</a> </p>
+
+<form asp-action="index">
+    <div class="form-group">
+        <label class="control-label">Search for your product</label>
+        <input name="productName" class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+        <span class="text-danger">@ViewBag.productNotFound</span>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProDescription)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Proid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Proid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Proid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
