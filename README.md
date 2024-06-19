@@ -10,10 +10,22 @@ Product Listings: Browse through a wide range of products categorized for easy n
 Shopping Cart: Add, remove, and update product quantities in the cart.
 Checkout Process: Complete purchases using a secure checkout system.
 Order History: View past orders and their statuses.
+
 Technologies Used
 Frontend: Visual Studio MVC
 Backend: Node.js
 Database: SSMSDB
+
 Installation
 Clone the repository:
 git clone https://github.com/Neliswa30/17314920_ACMEINC.git
+
+Usage
+Browse products and add them to your cart.
+Proceed to checkout and complete your purchase.
+
+Contributing
+Contributions are welcome! Please create an issue to discuss your ideas or submit a pull request.
+
+License
+This project is licensed under the MIT License.
