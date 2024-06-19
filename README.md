@@ -1,5 +1,5 @@
 # 17314920_ACMEINC-Shopping Website Project
-Welcome to the Online Shopping Website project! This repository contains the code and documentation for a full-fledged e-commerce platform developed as part of our college programming course.
+Welcome to the Online Shopping Website project! This repository contains the code and documentation for a full-fledged e-commerce platform developed as part of our college programming course. *Also note that this is a project for a student from IIE's Varsity College*
 
 ## Project Overview
 This repository contains the source code for a shopping website project developed as part of my college coursework. The project showcases a fully functional e-commerce platform where users can browse products, add them to their cart, and complete purchases.
